@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -18,17 +19,21 @@ public class favorite_food_list_Adapter extends RecyclerView.Adapter<favorite_fo
     private ArrayList<favorite_food_list> favorite_foods_ ;
 
     private ItemClicked activity;
-
+    private CartClicked cartClickedActivity;
 
     public interface ItemClicked{
         void onItemclicked(int index);
     }
+    public interface CartClicked{
+        void onCartClicked(int index);
+    }
 
 
 
-    public favorite_food_list_Adapter(ItemClicked clicked, ArrayList<favorite_food_list> list ) {
+    public favorite_food_list_Adapter(CartClicked cartClickedActivity, ItemClicked clicked, ArrayList<favorite_food_list> list ) {
         favorite_foods_ = list;
         activity = clicked;
+        this.cartClickedActivity = cartClickedActivity;
     }
 
 
@@ -67,6 +72,8 @@ public class favorite_food_list_Adapter extends RecyclerView.Adapter<favorite_fo
         private RatingBar rating;
         private ImageView food_image;
 
+        private ImageButton btn_add_to_cart_listen;
+
 
         ViewHolder(@NonNull final View itemView) {
             super(itemView);
@@ -78,6 +85,7 @@ public class favorite_food_list_Adapter extends RecyclerView.Adapter<favorite_fo
             price = itemView.findViewById(R.id.tv__price);
             rating = itemView.findViewById(R.id.ratingBar);
             food_image = itemView.findViewById(R.id.iv_food);
+            btn_add_to_cart_listen = itemView.findViewById(R.id.add_to_cart);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -85,6 +93,15 @@ public class favorite_food_list_Adapter extends RecyclerView.Adapter<favorite_fo
                     activity.onItemclicked(getAdapterPosition()/*favorite_foods_.indexOf((favorite_food_list) v.getTag())*/); //getAdapterPosition()
                 }
             });
+
+            btn_add_to_cart_listen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    cartClickedActivity.onCartClicked(getAdapterPosition());
+                }
+            });
+
         }
 
         void setData(favorite_food_list food) {
