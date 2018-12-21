@@ -8,21 +8,12 @@ android:layout_height="match_parent"
 tools:context=".bar_frag.favoriteFrag">
 
 
-    <fragment
-        android:id="@+id/fragment_favorite1"
-        android:name="com.example.dostontoshbekov.easyorder_app.bar_frag.favoriteFrag"
-        android:layout_width="445dp"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list12"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/list12"
-        android:layout_width="413dp"
-        android:layout_height="168dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_favorite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

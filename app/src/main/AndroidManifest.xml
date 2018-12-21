@@ -21,9 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity_bottom_navigation"
-            android:label="@string/title_activity_bottom_navigation"></activity>
-        <activity android:name=".bar_frag.favoriteFrag" />
+            android:name=".activity_bottom_navigation"></activity>
     </application>
 
 </manifest>
