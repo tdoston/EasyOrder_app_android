@@ -23,7 +23,7 @@
         <activity
             android:name=".activity_bottom_navigation"
             android:label="@string/title_activity_bottom_navigation"></activity>
-        <activity android:name=".favorite_recycler.favoriteFrag" />
+        <activity android:name=".bar_frag.favoriteFrag" />
     </application>
 
 </manifest>

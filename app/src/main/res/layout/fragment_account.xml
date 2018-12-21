@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".bar_frag.accountFrag"
-    android:id="@+id/fr_account">
+    android:id="@+id/fragment_user">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

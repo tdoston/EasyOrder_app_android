@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".bar_frag.menuFrag"
-    android:id="@+id/fr_menu">
+    android:id="@+id/fragment_menu">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
