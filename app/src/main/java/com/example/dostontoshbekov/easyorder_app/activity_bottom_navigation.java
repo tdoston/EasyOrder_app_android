@@ -24,6 +24,8 @@ public class activity_bottom_navigation extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
+
+
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
